@@ -1,0 +1,68 @@
+<!doctype html>
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<title>Calorie Calculator</title>
+	
+    <link rel="stylesheet" href="https://unpkg.com/purecss@0.6.2/build/pure-min.css" integrity="sha384-UQiGfs9ICog+LwheBSRCt1o5cbyKIHbwjWscjemyBMT9YCUMZffs6UqUTd0hObXD" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<h1>CALORIE CALCULATOR</h1>
+
+<body background="{{ url_for('static', filename='images/imagec.jpg') }}"> >
+<div class="main">
+	<form class="pure-form" method="POST" action="/">
+	<b>Weight in kgs:</b><br>
+	<input type="text" name="Weight"><br><br>
+<b>	Height in cms:</b><br>
+	<input type="text" name="Height"><br><br>
+  <b>Age:</b><br>
+	<input type="text" name="Age"><br>
+  <legend><b>Choose your Gender:</b></legend>
+  Male:
+  <input type="radio" name="Gender" id="Male" value="Male" >
+  Female:<input type="radio" name="gender" id="Female" value="Female"><br><br>
+  <legend><b>Select your activity:</b></legend>
+  Outdoor Games:
+  <input type="radio" name="activity" id="Outdoor Games" value="Outdoor Games"><br>
+  Running:
+  <input type="radio" name="activity" id="Running" value="Running"><br>
+  Walking:
+  <input type="radio" name="activity" id="Walking" value="Walking"><br>
+  Cardio Gym:
+  <input type="radio" name="activity" id="Cardi-gym-activities" value="Cardi-gym-activities"><br>
+  Cycling:
+  <input type="radio" name="activity" id="Cycling" value="Cycling"><br>
+  Swimming:
+  <input type="radio" name="activity" id="Swimming" value="Swimming"><br>
+  Weight lifting:
+  <input type="radio" name="activity" id="Weight lifting" value="Weight lifting" ><br><br>
+ <b> Duration in min:</b>
+	<input type="text" name="Duration"><br><br>
+  <b>Intensity:</b><br>
+  Heavy:
+  <input type="radio" name="intensity" id="Heavy" value="Heavy"><br>
+  Moderate:
+  <input type="radio" name="intensity" id="Moderate" value="Moderate"><br>
+  Light:
+  <input type="radio" name="intensity" id="Light" value="Light"><br><br>
+	<button type="submit" class="pure-button pure-button-primary" value="Submit">Submit</button>
+	</form>
+</div>
+
+<br>
+
+<div class="main">
+	{% if calorie %}
+       {% print("Your Calorie burnt is {}.".format(calorie)) %}
+	{% endif %}
+</div>
+
+ 
+
+</body>
