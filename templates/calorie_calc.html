@@ -17,40 +17,41 @@
 <body background="{{ url_for('static', filename='images/imagec.jpg') }}"> >
 <div class="main">
 	<form class="pure-form" method="POST" action="/">
+  <b><label for="Gender">Gender</label></b>
+  <select name="gender" id="Gender">
+    <option value="Male">Male</option>
+    <option value="Female">Female</option>  
+  </select>
+  <br>
+  <br>
+  <b>Age:</b><br>
+	<input type="text" name="Age"><br><br>
 	<b>Weight in kgs:</b><br>
 	<input type="text" name="Weight"><br><br>
 <b>	Height in cms:</b><br>
 	<input type="text" name="Height"><br><br>
-  <b>Age:</b><br>
-	<input type="text" name="Age"><br>
-  <legend><b>Choose your Gender:</b></legend>
-  Male:
-  <input type="radio" name="Gender" id="Male" value="Male" >
-  Female:<input type="radio" name="gender" id="Female" value="Female"><br><br>
-  <legend><b>Select your activity:</b></legend>
-  Outdoor Games:
-  <input type="radio" name="activity" id="Outdoor Games" value="Outdoor Games"><br>
-  Running:
-  <input type="radio" name="activity" id="Running" value="Running"><br>
-  Walking:
-  <input type="radio" name="activity" id="Walking" value="Walking"><br>
-  Cardio Gym:
-  <input type="radio" name="activity" id="Cardi-gym-activities" value="Cardi-gym-activities"><br>
-  Cycling:
-  <input type="radio" name="activity" id="Cycling" value="Cycling"><br>
-  Swimming:
-  <input type="radio" name="activity" id="Swimming" value="Swimming"><br>
-  Weight lifting:
-  <input type="radio" name="activity" id="Weight lifting" value="Weight lifting" ><br><br>
+  <b><label for ="Activity">Select your Activity</label></b>
+ <select name="activity" id="Activity">
+    <option value="Outdoor Games">Outdoor Games</option>
+    <option value="Running">Running</option>
+    <option value="Walking">Walking</option> 
+    <option value="Cardi-gym-activities">Cardi-gym-activities</option>
+    <option value="Cycling">Cycling</option>
+    <option value="Swimming">Swimming</option>
+    <option value="Weight lifting">Weight lifting</option>
+ </select><br>
+ <br>
+  
  <b> Duration in min:</b>
 	<input type="text" name="Duration"><br><br>
-  <b>Intensity:</b><br>
-  Heavy:
-  <input type="radio" name="intensity" id="Heavy" value="Heavy"><br>
-  Moderate:
-  <input type="radio" name="intensity" id="Moderate" value="Moderate"><br>
-  Light:
-  <input type="radio" name="intensity" id="Light" value="Light"><br><br>
+  <b><label for = "Intensity">Intensity</label></b>
+  <select name="intensity" id="Intensity">
+    <option value="Heavy">Heavy</option>
+    <option value="Moderate">Moderate</option>
+    <option value="Light">Light</option>
+  </select><br>
+  <br>
+  
 	<button type="submit" class="pure-button pure-button-primary" value="Submit">Submit</button>
 	</form>
 </div>
